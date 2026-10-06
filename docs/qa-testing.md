@@ -2,7 +2,7 @@
 
 ## 1. Testing Overview
 
-The Discourse Architecture Dashboard was tested for functionality, responsiveness, accessibility, and basic browser behavior.
+The Discourse Architecture Dashboard was tested for functionality, responsiveness, accessibility, browser behavior, console errors, asset loading, and performance.
 
 Testing focused on the requirements identified in the project assignment:
 
@@ -13,9 +13,9 @@ Testing focused on the requirements identified in the project assignment:
 * Browser compatibility
 * Console errors
 * Asset loading
-* Basic performance and usability
+* Performance and usability
 
-Testing was performed during development using the local Vite development server.
+Testing was performed during development using the local Vite development server and after deployment using the live Vercel application.
 
 ---
 
@@ -123,7 +123,7 @@ Instead, the following interaction edge cases were considered:
 
 ## 6. Browser and Console Testing
 
-The application was tested using a Chromium-based browser during development.
+The application was tested using a Chromium-based browser during development and on the deployed application.
 
 The following were checked:
 
@@ -139,12 +139,12 @@ The application was tested in Firefox using the same core interactions tested in
 
 The following were verified:
 
-- Application loads successfully
-- Component cards work correctly
-- Component details display correctly
-- Request simulation works
-- Keyboard navigation works
-- No visible layout issues were observed
+* Application loads successfully
+* Component cards work correctly
+* Component details display correctly
+* Request simulation works
+* Keyboard navigation works
+* No visible layout issues were observed
 
 **Firefox Status: Pass**
 
@@ -166,11 +166,11 @@ The following accessibility considerations were implemented:
 
 ### Result
 
-**Pass for implemented checks**
+**Pass**
 
 The final accessibility review was completed after functional and responsive testing.
 
-**Final Result: Pass**
+The deployed application received a **100 Accessibility score in Lighthouse**.
 
 ---
 
@@ -186,11 +186,18 @@ The prototype:
 * Uses simple React state for interactions
 * Uses CSS for visual transitions
 
-### Result
+### Lighthouse Testing
 
-**Pass for basic prototype performance**
+A Lighthouse audit was performed on the deployed Vercel application using Chrome DevTools with the Mobile configuration.
 
-A final Lighthouse check should be performed on the deployed version.
+Final results:
+
+* **Performance: 99**
+* **Accessibility: 100**
+
+These results indicate that the deployed prototype loads efficiently and meets a strong accessibility baseline.
+
+**Result: Pass**
 
 ---
 
@@ -212,20 +219,24 @@ This confirms that the project can be compiled successfully for production deplo
 
 ## 10. Final QA Status
 
-| Category                      | Status                           |
-| ----------------------------- | -------------------------------- |
-| Functional testing            | Pass                             |
-| Component interactions        | Pass                             |
-| Request simulation            | Pass                             |
-| Keyboard navigation           | Pass                             |
-| Responsive desktop layout     | Pass                             |
-| Responsive mobile layout      | Pass                             |
-| Edge cases                    | Pass                             |
-| Chromium testing              | Pass                             |
-| Firefox testing               | Pass                             |
-| Safari testing                | Not tested - Windows environment |
-| Production build              | Pass                             |
-| Final accessibility review    | Pass                             |
-| Lighthouse performance review | Pending                          |
+| Category                      | Status                                    |
+| ----------------------------- | ----------------------------------------- |
+| Functional testing            | Pass                                      |
+| Component interactions        | Pass                                      |
+| Request simulation            | Pass                                      |
+| Keyboard navigation           | Pass                                      |
+| Responsive desktop layout     | Pass                                      |
+| Responsive mobile layout      | Pass                                      |
+| Edge cases                    | Pass                                      |
+| Chromium testing              | Pass                                      |
+| Firefox testing               | Pass                                      |
+| Safari testing                | Not tested - Windows environment          |
+| Production build              | Pass                                      |
+| Final accessibility review    | Pass                                      |
+| Lighthouse performance review | Pass (99 Performance / 100 Accessibility) |
 
-The remaining accessibility and Lighthouse checks should be completed on the deployed application before final submission.
+### Overall QA Result
+
+**Pass**
+
+The deployed Discourse Architecture Dashboard passed the required functional, responsive, accessibility, browser, console, production-build, and Lighthouse checks that could be completed in the Windows development environment.
